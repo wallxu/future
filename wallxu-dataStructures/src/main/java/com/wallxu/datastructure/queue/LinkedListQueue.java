@@ -1,5 +1,8 @@
 package com.wallxu.datastructure.queue;
 
+/**
+ * @author wallxu
+ */
 public class LinkedListQueue<E> implements Queue<E> {
 
 
@@ -9,11 +12,18 @@ public class LinkedListQueue<E> implements Queue<E> {
         this.tail = null;
     }
 
-    private int size; //元素个数
-    private Node head, tail; //头部，尾部
+    /**
+     * 元素个数
+     */
+    private int size;
+    /**
+     * 头部，尾部
+     */
+    private Node head, tail;
 
-
-    //Node内部类
+    /**
+     * Node内部类
+     */
     private class Node{
         private E e;
         private Node next;

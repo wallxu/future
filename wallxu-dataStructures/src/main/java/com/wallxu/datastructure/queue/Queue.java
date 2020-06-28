@@ -7,11 +7,35 @@ package com.wallxu.datastructure.queue;
  */
 public interface Queue<E> {
 
-    public void enqueue(E e); //入队
 
-    public E dequeue();         //出队
+    /**
+     * 入队
+     * @param e
+     * @return: void
+     * @author: xukf
+     * @date: 2020/6/28 9:39
+     * @since 1.0.0
+     */
+    public void enqueue(E e);
 
-    public E getFront();        //取出队首
+    /**
+     * 出队
+     * @return: E
+     * @author: xukf
+     * @date: 2020/6/28 9:39
+     * @since 1.0.0
+     */
+    public E dequeue();
+
+
+    /**
+     * 取出队首
+     * @return: E
+     * @author: xukf
+     * @date: 2020/6/28 9:38
+     * @since 1.0.0
+     */
+    public E getFront();
 
     public int getSize();
 

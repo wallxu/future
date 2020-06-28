@@ -1,12 +1,23 @@
 package com.wallxu.datastructure.linkedlist;
 
+/**
+ * @author wallxu
+ */
 public class LinkedList<E> {
 
-    private int size; //元素个数
-    private Node dummyHead; //虚拟头结点
+    /**
+     * 元素个数
+     */
+    private int size;
+    /**
+     * 虚拟头结点
+     */
+    private Node dummyHead;
 
 
-    //Node内部类
+    /**
+     * Node内部类
+     */
     private class Node{
         private E e;
         private Node next;
@@ -31,7 +42,9 @@ public class LinkedList<E> {
         this.size = 0;
     }
 
-    //是否为空
+    /**
+     * 是否为空
+     */
     public boolean isEmpty(){
         return this.size == 0;
     }
@@ -40,7 +53,9 @@ public class LinkedList<E> {
         return this.size;
     }
 
-    //指定位置插入元素
+    /**
+     * 指定位置插入元素
+     */
     public void add(int index, E e){
         if (index < 0 || index > size){
             throw new ArrayIndexOutOfBoundsException("index is valid");
@@ -67,7 +82,9 @@ public class LinkedList<E> {
         add(size, e);
     }
 
-    //获取指定位置元素
+    /**
+     * 获取指定位置元素
+     */
     public E get(int index){
         if (index < 0 || index > size){
             throw new ArrayIndexOutOfBoundsException("index is valid");
@@ -162,8 +179,6 @@ public class LinkedList<E> {
 
         list.removeLast();
         System.out.println(list);
-
     }
-
 
 }

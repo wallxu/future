@@ -1,5 +1,8 @@
 package com.wallxu.datastructure.queue;
 
+/**
+ * @author wallxu
+ */
 public class QueueTest {
 
     public static void main(String[] args) {

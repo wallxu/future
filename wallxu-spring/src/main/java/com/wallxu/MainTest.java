@@ -1,10 +1,9 @@
 package com.wallxu;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 import com.wallxu.bean.Person;
 import com.wallxu.config.MainConfig;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MainTest {
 	

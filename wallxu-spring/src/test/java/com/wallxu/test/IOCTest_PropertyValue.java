@@ -1,11 +1,10 @@
 package com.wallxu.test;
 
+import com.wallxu.bean.Person;
+import com.wallxu.config.MainConfigOfPropertyValues;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
-
-import com.wallxu.bean.Person;
-import com.wallxu.config.MainConfigOfPropertyValues;
 
 public class IOCTest_PropertyValue {
 	AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfigOfPropertyValues.class);

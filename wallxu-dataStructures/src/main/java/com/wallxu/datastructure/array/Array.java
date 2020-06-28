@@ -1,8 +1,6 @@
 package com.wallxu.datastructure.array;
 
 /**
- * Created by Administrator on 2018/8/28.
- *
  *
  * 动态数组时间复杂度
  * 添加 O(n)

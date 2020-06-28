@@ -1,13 +1,12 @@
 package com.wallxu.test;
 
-import org.junit.Test;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 import com.wallxu.bean.Boss;
 import com.wallxu.bean.Car;
 import com.wallxu.bean.Color;
 import com.wallxu.config.MainConifgOfAutowired;
 import com.wallxu.service.BookService;
+import org.junit.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class IOCTest_Autowired {
 	

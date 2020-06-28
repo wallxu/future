@@ -6,7 +6,6 @@ public class ArrayStack<E> implements Stack<E> {
 
     private Array<E> array;
 
-    //构造函数
     public ArrayStack(int capacity) {
         this.array = new Array<>(capacity);
     }

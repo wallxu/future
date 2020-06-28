@@ -2,6 +2,9 @@ package com.wallxu.datastructure.stack;
 
 import com.wallxu.datastructure.linkedlist.LinkedList;
 
+/**
+ * @author wallxu
+ */
 public class LinkedListStack<E> implements Stack<E> {
 
     private LinkedList<E> linkedList;

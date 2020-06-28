@@ -13,7 +13,6 @@ public class ArrayQueue<E> implements Queue<E> {
 
     private Array<E> array;
 
-    //构造函数
     public ArrayQueue(int capacity) {
         this.array = new Array<>(capacity);
     }
