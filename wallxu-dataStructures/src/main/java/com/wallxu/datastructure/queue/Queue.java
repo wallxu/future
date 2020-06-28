@@ -12,7 +12,7 @@ public interface Queue<E> {
      * 入队
      * @param e
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/6/28 9:39
      * @since 1.0.0
      */
@@ -21,7 +21,7 @@ public interface Queue<E> {
     /**
      * 出队
      * @return: E
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/6/28 9:39
      * @since 1.0.0
      */
@@ -31,7 +31,7 @@ public interface Queue<E> {
     /**
      * 取出队首
      * @return: E
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/6/28 9:38
      * @since 1.0.0
      */

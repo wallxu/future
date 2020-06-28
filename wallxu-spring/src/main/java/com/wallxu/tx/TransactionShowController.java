@@ -6,8 +6,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email: wallxu
  * @date: 2020/5/21 16:15
  * @since 1.0.0
  */

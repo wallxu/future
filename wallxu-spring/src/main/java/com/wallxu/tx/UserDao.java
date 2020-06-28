@@ -19,7 +19,7 @@ public class UserDao {
 	 * 插入
 	 * @param userEntity
 	 * @return: void
-	 * @author: xukf
+	 * @author: wallxu
 	 * @date: 2020/5/22 16:28
 	 * @since 1.0.0
 	 */
@@ -34,7 +34,7 @@ public class UserDao {
 	 * 更新
 	 * @param userEntity
 	 * @return: int
-	 * @author: xukf
+	 * @author: wallxu
 	 * @date: 2020/5/22 16:28
 	 * @since 1.0.0
 	 */
@@ -50,7 +50,7 @@ public class UserDao {
 	 * 查询
 	 * @param userName
 	 * @return: com.wallxu.tx.UserEntity
-	 * @author: xukf
+	 * @author: wallxu
 	 * @date: 2020/5/22 16:28
 	 * @since 1.0.0
 	 */
