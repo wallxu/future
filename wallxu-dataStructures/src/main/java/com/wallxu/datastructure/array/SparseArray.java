@@ -2,7 +2,6 @@ package com.wallxu.datastructure.array;
 
 /**
  * 稀疏数组
-  * @return:
  * @author: wallxu
  * @date: 2020/6/28 14:56
  * @since 1.0.0

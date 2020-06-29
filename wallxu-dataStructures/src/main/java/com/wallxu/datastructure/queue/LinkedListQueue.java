@@ -5,8 +5,7 @@ package com.wallxu.datastructure.queue;
  */
 public class LinkedListQueue<E> implements Queue<E> {
 
-
-    public LinkedListQueue(){
+    public LinkedListQueue() {
         this.head = null;
         this.size = 0;
         this.tail = null;
@@ -24,7 +23,7 @@ public class LinkedListQueue<E> implements Queue<E> {
     /**
      * Node内部类
      */
-    private class Node{
+    private class Node {
         private E e;
         private Node next;
 
@@ -45,20 +44,19 @@ public class LinkedListQueue<E> implements Queue<E> {
 
     @Override
     public void enqueue(E e) {
-        if (tail == null){
+        if (tail == null) {
             tail = new Node(e);
             head = tail;
-        }else{
+        } else {
             tail.next = new Node(e);
             tail = tail.next;
         }
-
-        size ++;
+        size++;
     }
 
     @Override
     public E dequeue() {
-        if(isEmpty()){
+        if (isEmpty()) {
             throw new ArrayIndexOutOfBoundsException("queue is empty");
         }
 
@@ -66,10 +64,10 @@ public class LinkedListQueue<E> implements Queue<E> {
         head = head.next;
 
         cur.next = null;
-        if(head == null){
+        if (head == null) {
             tail = null;
         }
-        size --;
+        size--;
 
         return cur.e;
     }

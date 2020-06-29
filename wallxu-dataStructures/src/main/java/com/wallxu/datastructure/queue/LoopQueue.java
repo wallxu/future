@@ -9,6 +9,7 @@ package com.wallxu.datastructure.queue;
  *
  * public void enqueue(E e); O(1) 均摊
  * public E dequeue();       O(1) 均摊
+ * @author wallxu
  * @param <E>
 
  */
@@ -56,8 +57,6 @@ public class LoopQueue<E> implements Queue<E> {
         front = 0;
         tail = size;
     }
-
-
 
     @Override
     public E dequeue() {
