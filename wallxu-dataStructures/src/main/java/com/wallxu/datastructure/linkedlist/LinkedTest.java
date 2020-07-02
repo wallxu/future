@@ -1,5 +1,8 @@
 package com.wallxu.datastructure.linkedlist;
 
+import com.wallxu.datastructure.linkedlist.single.HeroNode;
+import com.wallxu.datastructure.linkedlist.single.SingleLinkedList;
+
 /**
  * @author: xukf
  * @email: xukf1@ziroom.com

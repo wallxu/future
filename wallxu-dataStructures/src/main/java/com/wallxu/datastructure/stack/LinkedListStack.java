@@ -38,6 +38,11 @@ public class LinkedListStack<E> implements Stack<E> {
         return this.linkedList.getLast();
     }
 
+    @Override
+    public void print() {
+
+    }
+
 
     @Override
     public String toString() {

@@ -2,6 +2,9 @@ package com.wallxu.datastructure.stack;
 
 import com.wallxu.datastructure.array.Array;
 
+/**
+ * @author wallxu
+ */
 public class ArrayStack<E> implements Stack<E> {
 
     private Array<E> array;
@@ -37,6 +40,11 @@ public class ArrayStack<E> implements Stack<E> {
     @Override
     public E peek() {
         return this.array.getLast();
+    }
+
+    @Override
+    public void print() {
+
     }
 
     @Override

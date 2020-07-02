@@ -1,14 +1,14 @@
-package com.wallxu.datastructure.linkedlist;
+package com.wallxu.datastructure.linkedlist.duplex;
 
 /**
- * TODO
+ * 循环节点
  *
  * @author: xukf
  * @email: xukf1@ziroom.com
- * @date: 2020/6/29 18:04
+ * @date: 2020/7/1 21:15
  * @since 1.0.0
  */
-public class HeroNode {
+public class DuplexHeroNode {
 
     /**
      * 编号
@@ -28,9 +28,14 @@ public class HeroNode {
     /**
      * 下个元素
      */
-    HeroNode next;
+    private DuplexHeroNode next;
 
-    public HeroNode(Integer num, String name, String nickName) {
+    /**
+     * 上个元素
+     */
+    private DuplexHeroNode pre;
+
+    public DuplexHeroNode(Integer num, String name, String nickName) {
         this.num = num;
         this.name = name;
         this.nickName = nickName;
@@ -60,20 +65,31 @@ public class HeroNode {
         this.nickName = nickName;
     }
 
-    public HeroNode getNext() {
+    public DuplexHeroNode getNext() {
         return next;
     }
 
-    public void setNext(HeroNode next) {
+    public void setNext(DuplexHeroNode next) {
         this.next = next;
     }
 
+    public DuplexHeroNode getPre() {
+        return pre;
+    }
+
+    public void setPre(DuplexHeroNode pre) {
+        this.pre = pre;
+    }
+
+
     @Override
     public String toString() {
-        return "HeroNode{" +
+        return "CircleHeroNode{" +
                 "num=" + num +
                 ", name='" + name + '\'' +
                 ", nickName='" + nickName + '\'' +
+                ", next=" + next +
+                ", pre=" + pre +
                 '}';
     }
 }

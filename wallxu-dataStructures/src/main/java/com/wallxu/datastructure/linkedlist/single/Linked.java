@@ -1,4 +1,4 @@
-package com.wallxu.datastructure.linkedlist;
+package com.wallxu.datastructure.linkedlist.single;
 
 /**
  * @author wallxu

@@ -1,4 +1,4 @@
-package com.wallxu.datastructure.linkedlist;
+package com.wallxu.datastructure.linkedlist.single;
 
 import java.util.Stack;
 
@@ -147,7 +147,7 @@ public class SingleLinkedList implements Linked {
      * 更新节点数据
      *
      * @param updateNode
-     * @return: com.wallxu.datastructure.linkedlist.HeroNode
+     * @return: com.wallxu.datastructure.linkedlist.single.HeroNode
      * @author: wallxu
      * @date: 2020/6/30 10:45
      * @since 1.0.0
@@ -235,7 +235,7 @@ public class SingleLinkedList implements Linked {
      * 2) 查找单链表中的倒数第k个结点
      *
      * @param k
-     * @return: com.wallxu.datastructure.linkedlist.HeroNode
+     * @return: com.wallxu.datastructure.linkedlist.single.HeroNode
      * @author: wallxu
      * @date: 2020/6/30 13:56
      * @since 1.0.0
