@@ -3,7 +3,7 @@ package com.wallxu.datastructure.linkedlist.circle;
 import com.wallxu.datastructure.linkedlist.duplex.DuplexHeroNode;
 
 /**
- * TODO
+ * 单向循环链表
  *
  * @author: xukf
  * @email: xukf1@ziroom.com

@@ -1,6 +1,6 @@
 package com.wallxu.datastructure.stack;
 
-import com.wallxu.datastructure.linkedlist.LinkedList;
+import com.wallxu.datastructure.linkedlist.single.LinkedList;
 
 /**
  * @author wallxu

@@ -3,19 +3,19 @@ package com.wallxu.datastructure.linkedlist.single;
 /**
  * @author wallxu
  */
-public interface Linked {
+public interface Linked<E> {
 
     /**
      * 在指定位置插入元素
      *
      * @param index
-     * @param heroNode
+     * @param node
      * @return: void
      * @author: wallxu
      * @date: 2020/6/29 17:48
      * @since 1.0.0
      */
-    void add(int index, HeroNode heroNode);
+    void add(int index, E node);
 
 
     /**
@@ -27,66 +27,45 @@ public interface Linked {
      * @date: 2020/6/29 19:11
      * @since 1.0.0
      */
-    void addByOrder(HeroNode insertNode);
+    void addByOrder(E insertNode);
 
     /**
      * 在末尾插入元素
      *
-     * @param heroNode
+     * @param node
      * @return: void
      * @author: wallxu
      * @date: 2020/6/29 17:48
      * @since 1.0.0
      */
-    void add(HeroNode heroNode);
+    void add(E node);
 
     /**
      * 移除某个元素
      *
      * @param index
-     * @return: HeroNode
+     * @return: E
      * @author: wallxu
      * @date: 2020/6/29 17:54
      * @since 1.0.0
      */
-    HeroNode remove(int index);
+    void remove(int index);
 
     /**
      * 更新几点信息
      *
      * @param updateNode
-     * @return: HeroNode
+     * @return: E
      * @author: wallxu
      * @date: 2020/6/29 17:54
      * @since 1.0.0
      */
-    HeroNode update(HeroNode updateNode);
-
-
-    /**
-     * 获取第一个元素
-     *
-     * @return: HeroNode
-     * @author: wallxu
-     * @date: 2020/6/29 17:53
-     * @since 1.0.0
-     */
-    HeroNode getFirst();
-
-    /**
-     * 获取最后一个元素
-     *
-     * @return: HeroNode
-     * @author: wallxu
-     * @date: 2020/6/29 17:53
-     * @since 1.0.0
-     */
-    HeroNode getLast();
+    E update(E updateNode);
 
     /**
      * 打印数据
      *
-     * @return: HeroNode
+     * @return: E
      * @author: wallxu
      * @date: 2020/6/29 17:53
      * @since 1.0.0

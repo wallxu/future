@@ -88,8 +88,7 @@ public class DuplexHeroNode {
                 "num=" + num +
                 ", name='" + name + '\'' +
                 ", nickName='" + nickName + '\'' +
-                ", next=" + next +
-                ", pre=" + pre +
+
                 '}';
     }
 }

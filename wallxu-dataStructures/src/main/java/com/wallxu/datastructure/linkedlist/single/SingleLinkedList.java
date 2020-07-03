@@ -10,7 +10,7 @@ import java.util.Stack;
  * @date: 2020/6/29 17:55
  * @since 1.0.0
  */
-public class SingleLinkedList implements Linked {
+public class SingleLinkedList implements Linked<HeroNode> {
 
     /**
      * 带头链表，头节点不能动
@@ -123,19 +123,19 @@ public class SingleLinkedList implements Linked {
     }
 
     @Override
-    public HeroNode remove(int index) {
+    public void remove(int index) {
         //临时节点保存头节点数据
         HeroNode curNode = headNode;
         while (true) {
 
             //要找到最后一个节点
             if (curNode.next == null) {
-                return null;
+                System.out.println("当前链表没数据");
             }
 
             if (curNode.getNext().getNum() == index) {
                 curNode.next = curNode.next.next;
-                return curNode;
+                break;
             }
 
             //往下遍历
@@ -174,17 +174,6 @@ public class SingleLinkedList implements Linked {
             curNode = curNode.next;
         }
     }
-
-    @Override
-    public HeroNode getFirst() {
-        return null;
-    }
-
-    @Override
-    public HeroNode getLast() {
-        return null;
-    }
-
 
     @Override
     public void print() {
@@ -272,11 +261,12 @@ public class SingleLinkedList implements Linked {
      * @since 1.0.0
      */
     public HeroNode reverseLinkedList() {
-        if(headNode == null || headNode.next == null){
+        if (headNode == null || headNode.next == null) {
             return headNode;
         }
         //反转节点头
-        HeroNode reverseNode = new HeroNode(0, "", "");;
+        HeroNode reverseNode = new HeroNode(0, "", "");
+        ;
         //后一个节点
         HeroNode nextNode = null;
         //当前节点指针
@@ -299,7 +289,7 @@ public class SingleLinkedList implements Linked {
 
 
     public HeroNode reverseLinkedList2() {
-        if(headNode == null || headNode.next == null){
+        if (headNode == null || headNode.next == null) {
             return headNode;
         }
         //前一个节点
