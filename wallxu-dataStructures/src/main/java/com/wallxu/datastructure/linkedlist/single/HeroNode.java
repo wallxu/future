@@ -36,6 +36,12 @@ public class HeroNode {
         this.nickName = nickName;
     }
 
+    public HeroNode(Integer num) {
+        this.num = num;
+        this.name = String.valueOf(num);
+        this.nickName = String.valueOf(num);
+    }
+
     public Integer getNum() {
         return num;
     }

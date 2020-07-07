@@ -28,12 +28,12 @@ public class DuplexHeroNode {
     /**
      * 下个元素
      */
-    private DuplexHeroNode next;
+    DuplexHeroNode next;
 
     /**
      * 上个元素
      */
-    private DuplexHeroNode pre;
+    DuplexHeroNode pre;
 
     public DuplexHeroNode(Integer num, String name, String nickName) {
         this.num = num;

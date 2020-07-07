@@ -1,5 +1,6 @@
 package com.wallxu.datastructure.linkedlist;
 
+import com.wallxu.datastructure.linkedlist.circle.CircleSingleLinkedList;
 import com.wallxu.datastructure.linkedlist.duplex.DuplexHeroNode;
 import com.wallxu.datastructure.linkedlist.duplex.DuplexLinkedList;
 import com.wallxu.datastructure.linkedlist.single.HeroNode;
@@ -16,7 +17,27 @@ public class LinkedTest {
         //单向链表测试
 //      singleLinkedListTest();
         //双向链表测试
-        duplexLinkedListTest();
+//        duplexLinkedListTest();
+        //单向循环链表测试
+        circleSingleLinkedListTest();
+    }
+
+    /**
+     * 单向循环链表测试
+     * @return: void
+     * @author: xukf
+     * @date: 2020/7/4 15:15
+     * @since 1.0.0
+     */
+    private static void circleSingleLinkedListTest() {
+        CircleSingleLinkedList circleSingleLinkedList = new CircleSingleLinkedList();
+//        circleSingleLinkedList.addLast(new HeroNode(5));
+//        circleSingleLinkedList.print();
+//        circleSingleLinkedList.update(new HeroNode(5, "55", "444"));
+        circleSingleLinkedList.print();
+
+        circleSingleLinkedList.josephu(5, 2,2);
+
     }
 
     /**
@@ -33,11 +54,15 @@ public class LinkedTest {
         DuplexHeroNode duplexHeroNode4 = new DuplexHeroNode(4, "公孙胜","入云龙");
         DuplexHeroNode duplexHeroNode5 = new DuplexHeroNode(5, "关胜","大刀");
         DuplexLinkedList duplexLinkedList = new DuplexLinkedList();
-        duplexLinkedList.add(duplexHeroNode1);
-        duplexLinkedList.add(duplexHeroNode2);
-        duplexLinkedList.add(duplexHeroNode3);
-        duplexLinkedList.add(duplexHeroNode4);
-        duplexLinkedList.add(duplexHeroNode5);
+
+        System.out.println("isEmpty: " + duplexLinkedList.isEmpty());
+        duplexLinkedList.addLast(duplexHeroNode1);
+        duplexLinkedList.addLast(duplexHeroNode2);
+        System.out.println("isEmpty: " + duplexLinkedList.isEmpty());
+        duplexLinkedList.addLast(duplexHeroNode3);
+        duplexLinkedList.addLast(duplexHeroNode4);
+        duplexLinkedList.addLast(duplexHeroNode5);
+        System.out.println("isEmpty: " + duplexLinkedList.isEmpty());
 
         duplexLinkedList.print();
 
@@ -58,10 +83,10 @@ public class LinkedTest {
      */
     private static void singleLinkedListTest() {
         SingleLinkedList singleLinkedList = new SingleLinkedList();
-        singleLinkedList.add(new HeroNode(1, "宋江","及时雨"));
-        singleLinkedList.add(new HeroNode(2, "卢俊义","玉麒麟"));
+        singleLinkedList.addLast(new HeroNode(1, "宋江","及时雨"));
+        singleLinkedList.addLast(new HeroNode(2, "卢俊义","玉麒麟"));
 
-        singleLinkedList.add(new HeroNode(3, "吴用","智多星"));
+        singleLinkedList.addLast(new HeroNode(3, "吴用","智多星"));
         singleLinkedList.getLength();
 //        singleLinkedList.add(2, new HeroNode(4, "公孙胜","入云龙"));
 //        singleLinkedList.add(3,new HeroNode(5, "关胜","大刀"));
@@ -84,6 +109,7 @@ public class LinkedTest {
 //        singleLinkedList.addByOrder(new HeroNode(3, "吴用","智多星"));
 //        singleLinkedList.addByOrder(new HeroNode(5, "关胜","大刀"));
         singleLinkedList.print();
+        //反向打印，原链表顺序不变
         singleLinkedList.reversePrint();
     }
 

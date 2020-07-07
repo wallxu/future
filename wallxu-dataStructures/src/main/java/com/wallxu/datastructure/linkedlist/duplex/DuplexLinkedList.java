@@ -1,6 +1,6 @@
 package com.wallxu.datastructure.linkedlist.duplex;
 
-import com.wallxu.datastructure.linkedlist.single.Linked;
+import com.wallxu.datastructure.linkedlist.Linked;
 
 /**
  * 双向链表
@@ -37,18 +37,18 @@ public class DuplexLinkedList implements Linked<DuplexHeroNode> {
      * @since 1.0.0
      */
     @Override
-    public void add(DuplexHeroNode node) {
+    public void addLast(DuplexHeroNode node) {
         //当前数据节点
         DuplexHeroNode curNode = headNode;
 
         while (curNode != null) {
-            if(curNode.getNext() == null){
+            if(curNode.next == null){
                 //最后一个节点
                 node.setPre(curNode);
                 curNode.setNext(node);
                 break;
             }
-            curNode = curNode.getNext();
+            curNode = curNode.next;
         }
     }
 
@@ -56,7 +56,7 @@ public class DuplexLinkedList implements Linked<DuplexHeroNode> {
     @Override
     public void remove(int index) {
         //当前数据节点
-        DuplexHeroNode curNode = headNode.getNext();
+        DuplexHeroNode curNode = headNode.next;
         if(curNode == null){
             System.out.println("当前链表没数据");
         }
@@ -67,13 +67,13 @@ public class DuplexLinkedList implements Linked<DuplexHeroNode> {
                 flag = true;
                 break;
             }
-            curNode = curNode.getNext();
+            curNode = curNode.next;
         }
 
         if(flag){
             //找到要删除的节点
-            curNode.getPre().setNext(curNode.getNext());
-            curNode.getNext().setPre(curNode.getPre());
+            curNode.pre.setNext(curNode.getNext());
+            curNode.next.setPre(curNode.getPre());
         }else {
             System.out.println("当前链表没找到对应节点数据");
         }
@@ -82,7 +82,7 @@ public class DuplexLinkedList implements Linked<DuplexHeroNode> {
     @Override
     public DuplexHeroNode update(DuplexHeroNode updateNode) {
         //当前数据节点
-        DuplexHeroNode curNode = headNode.getNext();
+        DuplexHeroNode curNode = headNode.next;
         if(curNode == null){
             System.out.println("当前链表没数据");
             return null;
@@ -95,7 +95,7 @@ public class DuplexLinkedList implements Linked<DuplexHeroNode> {
                curNode.setNickName(updateNode.getNickName());
                 break;
             }
-            curNode = curNode.getNext();
+            curNode = curNode.next;
         }
         return curNode;
     }
@@ -104,7 +104,7 @@ public class DuplexLinkedList implements Linked<DuplexHeroNode> {
     @Override
     public void print() {
         //当前数据节点
-        DuplexHeroNode curNode = headNode.getNext();
+        DuplexHeroNode curNode = headNode.next;
         if(curNode == null){
             System.out.println("当前链表没数据");
         }
@@ -112,8 +112,13 @@ public class DuplexLinkedList implements Linked<DuplexHeroNode> {
 
         while(curNode != null){
             System.out.println(curNode);
-            curNode = curNode.getNext();
+            curNode = curNode.next;
         }
         System.out.println("当前链表中的数据：----------end---------------");
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return headNode.next == null;
     }
 }

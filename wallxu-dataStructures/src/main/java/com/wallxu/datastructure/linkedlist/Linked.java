@@ -1,4 +1,4 @@
-package com.wallxu.datastructure.linkedlist.single;
+package com.wallxu.datastructure.linkedlist;
 
 /**
  * @author wallxu
@@ -38,7 +38,7 @@ public interface Linked<E> {
      * @date: 2020/6/29 17:48
      * @since 1.0.0
      */
-    void add(E node);
+    void addLast(E node);
 
     /**
      * 移除某个元素
@@ -72,4 +72,12 @@ public interface Linked<E> {
      */
     void print();
 
+    /**
+     * 队列是否为空
+     * @return: boolean
+     * @author: wallxu
+     * @date: 2020/7/4 8:57
+     * @since 1.0.0
+     */
+    boolean isEmpty();
 }

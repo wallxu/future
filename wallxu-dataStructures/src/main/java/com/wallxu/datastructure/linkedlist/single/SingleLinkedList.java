@@ -1,5 +1,7 @@
 package com.wallxu.datastructure.linkedlist.single;
 
+import com.wallxu.datastructure.linkedlist.Linked;
+
 import java.util.Stack;
 
 /**
@@ -108,7 +110,7 @@ public class SingleLinkedList implements Linked<HeroNode> {
      * @since 1.0.0
      */
     @Override
-    public void add(HeroNode insertNode) {
+    public void addLast(HeroNode insertNode) {
         //临时节点保存头节点数据
         HeroNode curNode = headNode;
         while (true) {
@@ -192,6 +194,11 @@ public class SingleLinkedList implements Linked<HeroNode> {
         }
     }
 
+    @Override
+    public boolean isEmpty() {
+        return headNode.next == null;
+    }
+
 
     /**
      * 1) 求单链表中有效节点的个数
@@ -266,7 +273,7 @@ public class SingleLinkedList implements Linked<HeroNode> {
         }
         //反转节点头
         HeroNode reverseNode = new HeroNode(0, "", "");
-        ;
+
         //后一个节点
         HeroNode nextNode = null;
         //当前节点指针
