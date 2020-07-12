@@ -16,8 +16,15 @@ public class SelectSort {
         int[] arr = new int[]{-1, 32, 2, 4, -1, -20};
 
         System.out.println("排序前---->>>>" + Arrays.toString(arr));
+        //按步骤选择排序
+        selectSortByStep(arr);
+
         selectSort(arr);
         System.out.println("排序后---->>>>" + Arrays.toString(arr));
+
+    }
+
+    private static void selectSortByStep(int[] arr) {
 
     }
 
