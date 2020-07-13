@@ -77,7 +77,7 @@ public class InsertSort {
                 arr[insertIndex] = arr[insertIndex - 1];
                 insertIndex--;
             }
-
+            //退出while循环，要插入的位置找到了
             arr[insertIndex] = insertValue;
         }
     }
