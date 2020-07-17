@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 冒泡排序
+ * 对排序序列从前向后（从下标较小的元素开始）,依次比较相邻的两个元素的值，若发现逆序则交换，使值较大的元素逐渐从前移向后部。
  *
  * @author: xukf
  * @email: xukf1@ziroom.com

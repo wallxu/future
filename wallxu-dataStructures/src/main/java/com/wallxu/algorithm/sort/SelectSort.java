@@ -4,8 +4,9 @@ import java.util.Arrays;
 
 /**
  * 选择排序
- * 每次选出最小的，与头部元素交换
  *
+ * 选择排序算法分已排序区间和未排序区间。
+ * 每次会从未排序区间中找到最小的元素，将其放到已排序区间的末尾。
  * @author: xukf
  * @email: xukf1@ziroom.com
  * @date: 2020/7/7 14:02
