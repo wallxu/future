@@ -40,35 +40,37 @@ public class RadixSort {
         }
 
         //存放0-9，每个元素的出现的个数
+        //countBucket[0],记录的就是bucket[0]桶的放入数据个数
         int[] countBucket = new int[10];
 
         //遍历每个数据的最大次数
-        for (int j = 0, k = 1; j < valueLength; j++, k *= 10) {
+        for (int i = 0, k = 1; i < valueLength; i++, k *= 10) {
             //从头到尾遍历数组
-            for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
                 //(针对每个元素的对应位进行排序处理)， 第一次是个位，第二次是十位，第三次是百位..
-                int digitOfElement = arr[i] / k % 10;
+                int digitOfElement = arr[j] / k % 10;
                 //将元素放到对应桶中
-                bucket[digitOfElement][countBucket[digitOfElement]] = arr[i];
+                bucket[digitOfElement][countBucket[digitOfElement]] = arr[j];
                 //该元素在桶中出现的次数+1
                 countBucket[digitOfElement]++;
             }
 
-            //所有元素的计数清零
-            countBucket = new int[10];
-
             //把bucket中的元素放回arr数组里
             int c = 0;
-            for (int m = 0; m < bucket.length; m++) {
-                for (int n = 0; n < bucket[m].length; n++) {
-                    if (bucket[m][n] != 0) {
+            for (int m = 0; m < countBucket.length; m++) {
+                //该元素出现次数不为0，才有必要放回原数据
+                if (countBucket[m] != 0) {
+                    for (int n = 0; n < countBucket[m]; n++) {
+                        //把bucket中的元素放回arr数组里
                         arr[c] = bucket[m][n];
                         c++;
-                        bucket[m][n] = 0;
                     }
+
+                    //统计次数清空
+                    countBucket[m] = 0;
                 }
             }
-            System.out.println("第" + (j + 1) + "次排序后：" + Arrays.toString(arr));
+            System.out.println("第" + (i + 1) + "次排序后：" + Arrays.toString(arr));
         }
     }
 }
