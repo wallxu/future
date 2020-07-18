@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * 快速排序
  *
+ * 我们遍历p到r之间的数据，将小于pivot的放到左边，将大于pivot的放到右边，将pivot放到中间。
+ * 经过这一步骤之后，数组p到r之间的数据就被分成了三个部分，前面p到q-1之间都是小于pivot的，
+ * 中间是pivot，后面的q+1到r之间是大于pivot的。
  * @author: xukf
  * @email: xukf1@ziroom.com
  * @date: 2020/7/15 15:03
@@ -14,7 +17,6 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[] arr = new int[]{6, -1, 5, -1, 32, 2, 4, -1, -20};
-//        int[] arr = new int[]{3, 6, 5, 7, 2, 4};
 
         System.out.println("排序前---->>>>" + Arrays.toString(arr));
         quickSort(arr);
