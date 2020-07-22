@@ -3,8 +3,8 @@ package com.wallxu.datastructure.stack;
 /**
  * 固定长度的数组栈
  *
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email:
  * @date: 2020/7/2 11:54
  * @since 1.0.0
  */

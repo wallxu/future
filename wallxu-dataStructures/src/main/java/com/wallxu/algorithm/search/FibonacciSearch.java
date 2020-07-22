@@ -5,8 +5,8 @@ import java.util.Arrays;
 /**
  * 斐波那契查找
  *
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email:
  * @date: 2020/7/20 8:59
  * @since 1.0.0
  */
@@ -26,7 +26,7 @@ public class FibonacciSearch {
      * 非递归方法得到一个斐波那契数列
      *
      * @return: int[]
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/20 8:59
      * @since 1.0.0
      */

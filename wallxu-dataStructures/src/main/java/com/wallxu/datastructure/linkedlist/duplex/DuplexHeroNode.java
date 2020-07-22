@@ -3,8 +3,8 @@ package com.wallxu.datastructure.linkedlist.duplex;
 /**
  * 循环节点
  *
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email:
  * @date: 2020/7/1 21:15
  * @since 1.0.0
  */

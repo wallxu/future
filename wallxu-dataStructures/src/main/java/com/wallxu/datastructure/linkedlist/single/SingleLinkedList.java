@@ -7,8 +7,8 @@ import java.util.Stack;
 /**
  * 单链表
  *
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email:
  * @date: 2020/6/29 17:55
  * @since 1.0.0
  */

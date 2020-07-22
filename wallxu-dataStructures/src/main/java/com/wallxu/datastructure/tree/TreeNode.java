@@ -3,8 +3,8 @@ package com.wallxu.datastructure.tree;
 /**
  * TODO
  *
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email:
  * @date: 2020/7/21 22:09
  * @since 1.0.0
  */

@@ -2,7 +2,7 @@ package com.wallxu.algorithm.search;
 
 /***
  * 插值查找，必须是一个有序数组
- * @author xukf
+ * @author wallxu
  */
 public class InsertValueSearch {
 

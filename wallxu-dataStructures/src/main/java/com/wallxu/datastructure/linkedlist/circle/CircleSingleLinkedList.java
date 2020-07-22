@@ -6,8 +6,8 @@ import com.wallxu.datastructure.linkedlist.single.HeroNode;
 /**
  * 单向循环链表
  *
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email:
  * @date: 2020/7/1 21:24
  * @since 1.0.0
  */
@@ -23,7 +23,7 @@ public class CircleSingleLinkedList implements Linked<HeroNode> {
      *
      * @param nums
      * @return:
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/4 14:45
      * @since 1.0.0
      */
@@ -186,7 +186,7 @@ public class CircleSingleLinkedList implements Linked<HeroNode> {
      * @param startNo 表示从第几个开始数数
      * @param countNum 表示数几下
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/4 16:33
      * @since 1.0.0
      */

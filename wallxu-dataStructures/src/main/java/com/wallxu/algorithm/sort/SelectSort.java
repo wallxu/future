@@ -7,8 +7,8 @@ import java.util.Arrays;
  *
  * 选择排序算法分已排序区间和未排序区间。
  * 每次会从未排序区间中找到最小的元素，将其放到已排序区间的末尾。
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email:
  * @date: 2020/7/7 14:02
  * @since 1.0.0
  */

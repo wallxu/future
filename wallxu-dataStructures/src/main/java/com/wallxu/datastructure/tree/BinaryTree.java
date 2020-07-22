@@ -3,8 +3,8 @@ package com.wallxu.datastructure.tree;
 /**
  * 二叉树遍历
  *
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email:
  * @date: 2020/7/21 22:09
  * @since 1.0.0
  */
@@ -31,7 +31,7 @@ public class BinaryTree {
      * @param root
      * @param key
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/21 23:05
      * @since 1.0.0
      */
@@ -67,7 +67,7 @@ public class BinaryTree {
      * @param root
      * @param key
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/22 9:01
      * @since 1.0.0
      */
@@ -103,7 +103,7 @@ public class BinaryTree {
      * @param root
      * @param key
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/22 9:00
      * @since 1.0.0
      */
@@ -140,7 +140,7 @@ public class BinaryTree {
      * @param root
      * @param key
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/21 23:07
      * @since 1.0.0
      */
@@ -171,7 +171,7 @@ public class BinaryTree {
      *
      * @param root
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/21 23:05
      * @since 1.0.0
      */
@@ -197,7 +197,7 @@ public class BinaryTree {
      *
      * @param root
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/21 22:38
      * @since 1.0.0
      */
@@ -214,7 +214,7 @@ public class BinaryTree {
      *
      * @param root
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/21 22:34
      * @since 1.0.0
      */
@@ -231,7 +231,7 @@ public class BinaryTree {
      *
      * @param root
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/21 22:29
      * @since 1.0.0
      */
@@ -247,7 +247,7 @@ public class BinaryTree {
      * 生成TreeNode数据
      *
      * @return: com.wallxu.datastructure.tree.TreeNode
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/21 22:14
      * @since 1.0.0
      */

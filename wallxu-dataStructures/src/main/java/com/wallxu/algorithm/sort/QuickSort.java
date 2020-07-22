@@ -8,8 +8,8 @@ import java.util.Arrays;
  * 我们遍历p到r之间的数据，将小于pivot的放到左边，将大于pivot的放到右边，将pivot放到中间。
  * 经过这一步骤之后，数组p到r之间的数据就被分成了三个部分，前面p到q-1之间都是小于pivot的，
  * 中间是pivot，后面的q+1到r之间是大于pivot的。
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email:
  * @date: 2020/7/15 15:03
  * @since 1.0.0
  */
@@ -63,7 +63,7 @@ public class QuickSort {
      * @param i
      * @param j
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/15 19:47
      * @since 1.0.0
      */

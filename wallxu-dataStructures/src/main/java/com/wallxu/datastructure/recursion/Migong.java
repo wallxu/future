@@ -3,8 +3,8 @@ package com.wallxu.datastructure.recursion;
 /**
  * 迷宫走法
  *
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email:
  * @date: 2020/7/6 19:47
  * @since 1.0.0
  */
@@ -44,7 +44,7 @@ public class Migong {
      * @param i   i,j 表示从地图的哪个位置开始出发(1,1)
      * @param j
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/6 20:23
      * @since 1.0.0
      */
@@ -98,7 +98,7 @@ public class Migong {
      *
      * @param migong
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/6 20:23
      * @since 1.0.0
      */
@@ -127,7 +127,7 @@ public class Migong {
      *
      * @param arr
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/6 20:23
      * @since 1.0.0
      */

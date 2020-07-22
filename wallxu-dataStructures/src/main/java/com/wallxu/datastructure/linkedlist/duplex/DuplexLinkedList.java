@@ -5,8 +5,8 @@ import com.wallxu.datastructure.linkedlist.Linked;
 /**
  * 双向链表
  *
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email:
  * @date: 2020/7/2 9:32
  * @since 1.0.0
  */

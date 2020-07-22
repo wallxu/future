@@ -7,8 +7,8 @@ import com.wallxu.datastructure.linkedlist.single.HeroNode;
 import com.wallxu.datastructure.linkedlist.single.SingleLinkedList;
 
 /**
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
+ * @email:
  * @date: 2020/6/29 18:53
  * @since 1.0.0
  */
@@ -25,7 +25,7 @@ public class LinkedTest {
     /**
      * 单向循环链表测试
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/4 15:15
      * @since 1.0.0
      */

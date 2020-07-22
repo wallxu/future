@@ -5,7 +5,7 @@ import java.util.List;
 
 /***
  * 二分查找，必须是一个有序数组
- * @author xukf
+ * @author wallxu
  */
 public class BinarySearch {
 
@@ -30,7 +30,7 @@ public class BinarySearch {
      * @param arrList
      * @param target
      * @return: java.util.List<java.lang.Integer>
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/18 10:40
      * @since 1.0.0
      */
