@@ -16,11 +16,45 @@ public class BinaryTree {
 
         TreeNode root = treeNodes();
 
+        //转换为数组的形式存储
+        TreeNode[] arr = covert2Array(root);
+        System.out.println("转换后数组：");
+        for (TreeNode i : arr) {
+            System.out.println(i.getName() + ",");
+        }
+
         //前、中、后序查找
-        takeSearch(root, "老A");
+//        takeSearch(root, "老A");
 
         //前、中、后序遍历
 //        takeOrder(root);
+
+    }
+
+    /**
+     * 转换为数组的形式存储
+     * 顺序二叉树通常只考虑完全二叉树
+     * 第n个元素的左子节点为  2 * n + 1
+     * 第n个元素的右子节点为  2 * n + 2
+     * 第n个元素的父节点为  (n-1) / 2
+     *
+     * @param root
+     * @return: com.wallxu.datastructure.tree.TreeNode[]
+     * @author: xukf
+     * @date: 2020/7/23 12:35
+     * @since 1.0.0
+     */
+    private static TreeNode[] covert2Array(TreeNode root) {
+        int length = root.getSize();
+
+        TreeNode[] arr = new TreeNode[length];
+        for (int i = 0; i < length; i++) {
+            if(root != null){
+                arr[i] = root;
+            }
+
+        }
+        return arr;
 
     }
 
@@ -87,11 +121,9 @@ public class BinaryTree {
                 }
             }
 
+            count++;
             if (root.getName().equals(key)) {
-                count++;
                 return root;
-            } else {
-                count++;
             }
         }
         return null;
@@ -109,7 +141,6 @@ public class BinaryTree {
      */
     private static TreeNode inOrderSearch(TreeNode root, String key) {
         if (root != null) {
-
             if (root.left != null) {
                 TreeNode leftNode = inOrderSearch(root.left, key);
                 if (leftNode != null) {
@@ -117,11 +148,9 @@ public class BinaryTree {
                 }
             }
 
+            count++;
             if (root.getName().equals(key)) {
-                count++;
                 return root;
-            } else {
-                count++;
             }
 
             if (root.right != null) {
