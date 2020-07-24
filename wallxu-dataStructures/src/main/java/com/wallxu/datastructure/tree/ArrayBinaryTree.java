@@ -92,6 +92,12 @@ public class ArrayBinaryTree {
      * @since 1.0.0
      */
     private void preOrderIndex(int index) {
+
+        //如果数组为空，或者arr.length = 0
+        if(arr == null || arr.length == 0) {
+            System.out.println("数组为空，不能按照二叉树的前序遍历");
+        }
+
         if (index < this.arr.length) {
             System.out.print(this.arr[index] + "->");
 
