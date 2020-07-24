@@ -14,8 +14,23 @@ import com.wallxu.datastructure.stack.Stack;
 public class TreeNode {
     private String name;
 
+    /***
+     * 左节点
+     */
     TreeNode left;
+    /***
+     * 右节点
+     */
     TreeNode right;
+
+    /***
+     * 左节点类型，0左子树，1前驱节点
+     */
+    private Integer leftType;
+    /***
+     * 右节点类型，0左子树，1前驱节点
+     */
+    private Integer rightType;
 
     public TreeNode(String name) {
         this.name = name;
@@ -72,7 +87,6 @@ public class TreeNode {
                 return node;
             }
         }
-
         return null;
     }
 
@@ -88,13 +102,11 @@ public class TreeNode {
      * @since 1.0.0
      */
     public void delNode(String name) {
-
-
     }
 
 
     public static void main(String[] args) {
-        TreeNode rootNode = treeNodes();
+        TreeNode rootNode = createTreeNodes();
 
 //        TreeNode node = rootNode.preSearch("老C");
 //        System.out.println(node.getName() +
@@ -111,7 +123,7 @@ public class TreeNode {
      * @date: 2020/7/21 22:14
      * @since 1.0.0
      */
-    private static TreeNode treeNodes() {
+    public static TreeNode createTreeNodes() {
         TreeNode rootNodeA = new TreeNode("老A");
         TreeNode rootNodeB = new TreeNode("老B");
         TreeNode rootNodeC = new TreeNode("老C");
@@ -137,6 +149,7 @@ public class TreeNode {
 
     /**
      * 返回二叉树中节点个数，非递归形式
+     *
      * @return: int
      * @author: xukf
      * @date: 2020/7/23 14:11
@@ -147,21 +160,47 @@ public class TreeNode {
         int size = 0;
         TreeNode node = this;
         //node为null，同时栈里没数据的时候，退出循环
-        while (node != null || !stack.isEmpty()){
+        while (node != null || !stack.isEmpty()) {
             //左边走
-            if(node != null){
+            if (node != null) {
                 stack.push(node);
                 //指向左节点
 //              System.out.println(node.getName());
                 size++;
                 node = node.left;
-            }else {
+            } else {
                 //从栈中取出元素，展示右节点
                 TreeNode pop = stack.pop();
                 node = pop.right;
             }
         }
-
         return size;
+    }
+
+    public Integer getLeftType() {
+        return leftType;
+    }
+
+    public void setLeftType(Integer leftType) {
+        this.leftType = leftType;
+    }
+
+    public Integer getRightType() {
+        return rightType;
+    }
+
+    public void setRightType(Integer rightType) {
+        this.rightType = rightType;
+    }
+
+    @Override
+    public String toString() {
+        return "TreeNode{" +
+                "name='" + name + '\'' +
+                ", leftType=" + leftType +
+                ", rightType=" + rightType +
+                ", left=" + (left != null ? left.getName() : "") +
+                ", right=" + (right != null ? right.getName() : "") +
+                '}';
     }
 }

@@ -14,7 +14,7 @@ public class BinaryTree {
 
     public static void main(String[] args) {
 
-        TreeNode root = treeNodes();
+        TreeNode root = TreeNode.createTreeNodes();
 
         //转换为数组的形式存储
         TreeNode[] arr = covert2Array(root);
@@ -52,16 +52,13 @@ public class BinaryTree {
             if(root != null){
                 arr[i] = root;
             }
-
         }
         return arr;
-
     }
 
 
     /**
      * 前、中、后序查找
-     *
      * @param root
      * @param key
      * @return: void
@@ -165,7 +162,6 @@ public class BinaryTree {
 
     /**
      * 前序查找 根，左，右
-     *
      * @param root
      * @param key
      * @return: void
@@ -197,7 +193,6 @@ public class BinaryTree {
 
     /**
      * 前、中、后序遍历
-     *
      * @param root
      * @return: void
      * @author: wallxu
@@ -223,7 +218,6 @@ public class BinaryTree {
 
     /**
      * 后序遍历， 左，右，根
-     *
      * @param root
      * @return: void
      * @author: wallxu
@@ -240,7 +234,6 @@ public class BinaryTree {
 
     /**
      * 中序遍历 左，根，右
-     *
      * @param root
      * @return: void
      * @author: wallxu
@@ -272,35 +265,4 @@ public class BinaryTree {
         }
     }
 
-    /**
-     * 生成TreeNode数据
-     *
-     * @return: com.wallxu.datastructure.tree.TreeNode
-     * @author: wallxu
-     * @date: 2020/7/21 22:14
-     * @since 1.0.0
-     */
-    private static TreeNode treeNodes() {
-        TreeNode rootNodeA = new TreeNode("老A");
-        TreeNode rootNodeB = new TreeNode("老B");
-        TreeNode rootNodeC = new TreeNode("老C");
-        TreeNode rootNodeD = new TreeNode("老D");
-        TreeNode rootNodeE = new TreeNode("老E");
-        TreeNode rootNodeF = new TreeNode("老F");
-        TreeNode rootNodeG = new TreeNode("老G");
-
-        // -----------A----------
-        // ------B-       -C-----
-        // ----D----E-   -F---G--
-
-        rootNodeA.left = rootNodeB;
-        rootNodeA.right = rootNodeC;
-
-        rootNodeB.left = rootNodeD;
-        rootNodeB.right = rootNodeE;
-
-        rootNodeC.left = rootNodeF;
-        rootNodeC.right = rootNodeG;
-        return rootNodeA;
-    }
 }
