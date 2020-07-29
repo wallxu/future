@@ -3,8 +3,7 @@ package com.wallxu.datastructure.tree;
 /**
  * 顺序存储二叉树
  *
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
  * @date: 2020/7/23 12:30
  * @since 1.0.0
  */
@@ -21,7 +20,7 @@ public class ArrayBinaryTree {
      *
      * @param arr
      * @return:
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/23 12:32
      * @since 1.0.0
      */
@@ -54,7 +53,7 @@ public class ArrayBinaryTree {
      *
      * @param index
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/23 15:43
      * @since 1.0.0
      */
@@ -87,7 +86,7 @@ public class ArrayBinaryTree {
      * * 第n个元素的父节点为  (n-1) / 2
      *
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/23 14:59
      * @since 1.0.0
      */

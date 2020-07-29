@@ -97,7 +97,7 @@ public class TreeNode {
      *
      * @param name
      * @return: com.wallxu.datastructure.tree.TreeNode
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/23 11:58
      * @since 1.0.0
      */
@@ -151,7 +151,7 @@ public class TreeNode {
      * 返回二叉树中节点个数，非递归形式
      *
      * @return: int
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/23 14:11
      * @since 1.0.0
      */

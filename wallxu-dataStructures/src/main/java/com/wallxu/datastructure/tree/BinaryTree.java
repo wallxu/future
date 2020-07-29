@@ -40,7 +40,7 @@ public class BinaryTree {
      *
      * @param root
      * @return: com.wallxu.datastructure.tree.TreeNode[]
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/23 12:35
      * @since 1.0.0
      */

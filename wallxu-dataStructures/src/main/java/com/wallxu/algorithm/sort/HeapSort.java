@@ -4,7 +4,7 @@ package com.wallxu.algorithm.sort;
  * 堆排序
  *
  * @return:
- * @author: xukf
+ * @author: wallxu
  * @date: 2020/7/26 22:02
  * @since 1.0.0
  */
@@ -22,7 +22,7 @@ public class HeapSort {
      * @param array
      * @param val
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/26 22:04
      * @since 1.0.0
      */
@@ -36,7 +36,7 @@ public class HeapSort {
      *
      * @param array
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/26 22:04
      * @since 1.0.0
      */
@@ -50,7 +50,7 @@ public class HeapSort {
      *
      * @param array
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/26 22:04
      * @since 1.0.0
      */
@@ -69,7 +69,7 @@ public class HeapSort {
      * @param i      表示非叶子结点在数组中索引
      * @param length 表示对多少个元素继续调整，length是在逐渐的减少
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/28 16:52
      * @since 1.0.0
      */
@@ -117,7 +117,7 @@ public class HeapSort {
      *
      * @param arr
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/28 21:10
      * @since 1.0.0
      */

@@ -7,9 +7,7 @@ import java.util.Date;
 
 /**
  * MessageInfo实体
- * @author: liuxm
- * @email:  liuxm7@ziroom.com
- * @date:   2017-11-28 16:11:58
+ * @author wallxu
  * @since 1.0.0
  */
 public class MessageInfoEntity {
