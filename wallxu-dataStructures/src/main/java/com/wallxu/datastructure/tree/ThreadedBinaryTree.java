@@ -33,6 +33,7 @@ public class ThreadedBinaryTree {
     private static void inOrder(TreeNode rootNode) {
         while (rootNode != null) {
             //循环找到第一个，leftType=1的节点
+            //处理后的有效结点
             while (rootNode.getLeftType() == 0) {
                 rootNode = rootNode.left;
             }
@@ -41,6 +42,7 @@ public class ThreadedBinaryTree {
             System.out.println(rootNode);
             //如果当前节点的rightType =1,就一直输出
             while (rootNode.getRightType() != null && rootNode.getRightType() == 1) {
+                //获取到当前结点的后继结点
                 rootNode = rootNode.right;
                 System.out.println(rootNode);
             }
@@ -63,6 +65,7 @@ public class ThreadedBinaryTree {
                 node.setLeftType(0);
             } else {
                 //左节点没数据，指向前驱节点
+                //让当前结点的左指针指向前驱结点
                 node.setLeft(preNode);
                 node.setLeftType(1);
             }
@@ -73,7 +76,9 @@ public class ThreadedBinaryTree {
                     preNode.setRightType(0);
                 } else {
                     //右节点没数据，指向后继节点
+                    //让前驱结点的右指针指向当前结点
                     preNode.setRight(node);
+                    //修改前驱结点的右指针类型
                     preNode.setRightType(1);
                 }
             }
