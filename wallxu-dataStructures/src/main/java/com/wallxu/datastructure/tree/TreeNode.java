@@ -90,20 +90,6 @@ public class TreeNode {
         return null;
     }
 
-    /**
-     * 删除节点
-     * 如果删除的节点是叶子节点，则删除该节点
-     * 如果删除的节点是非叶子节点，则删除该子树.
-     *
-     * @param name
-     * @return: com.wallxu.datastructure.tree.TreeNode
-     * @author: wallxu
-     * @date: 2020/7/23 11:58
-     * @since 1.0.0
-     */
-    public void delNode(String name) {
-    }
-
 
     public static void main(String[] args) {
         TreeNode rootNode = createTreeNodes();

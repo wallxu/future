@@ -20,8 +20,45 @@ public class BinarySearch {
 
         //个有序数组中，有多个相同的数值时，如何将所有的数值都查找到
         int[] arrList = {1, 8, 10, 89, 1000, 1000, 1000, 1000, 1000, 1000, 1234};
-        List indexList = binarySearchAll(arrList, 1000);
-        System.out.println("binarySearchAll 数组下标：" + indexList.toString());
+//        List indexList = binarySearchAll(arrList, 1000);
+//        System.out.println("binarySearchAll 数组下标：" + indexList.toString());
+
+        index = binarySearchForWhile(arr, 100);
+        System.out.println("二分查找位置：" + index);
+    }
+
+    /**
+     * 二分查找-非递归方式
+     *
+     * @param arr    待查找的数组, arr 是升序排序
+     * @param target 需要查找的数
+     * @return: int 返回对应下标，-1 表示没有找到
+     * @author: xukf
+     * @date: 2020/8/1 9:57
+     * @since 1.0.0
+     */
+    private static int binarySearchForWhile(int[] arr, int target) {
+        //左下标位置
+        int left = 0;
+        //右下标位置
+        int right = arr.length - 1;
+        //当前下标位置
+        int mid = 0;
+        while (left <= right) {
+            mid = (left + right) / 2;
+
+            if (arr[mid] < target) {
+                //当前元素小于目标元素，当前位置右移
+                left = mid + 1;
+            } else if (arr[mid] > target) {
+                //当前元素大于目标元素，当前位置左移
+                right = mid - 1;
+            } else if (arr[mid] == target) {
+                //当前元素等于目标元素，返回当前位置
+                return mid;
+            }
+        }
+        return -1;
     }
 
     /**
