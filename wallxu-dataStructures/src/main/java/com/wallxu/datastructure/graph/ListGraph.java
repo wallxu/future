@@ -140,7 +140,7 @@ public class ListGraph implements Graph {
      * @since 1.0.0
      */
     @Override
-    public void bst() {
+    public void bst(String startVertex) {
 
     }
 

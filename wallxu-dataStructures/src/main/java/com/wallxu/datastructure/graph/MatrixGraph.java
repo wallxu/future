@@ -2,6 +2,7 @@ package com.wallxu.datastructure.graph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -42,6 +43,8 @@ public class MatrixGraph implements Graph {
         matrixGraph.dst("A");
         System.out.println();
         System.out.println("广度优先遍历");
+
+        matrixGraph.bst("A");
     }
 
     /**
@@ -81,6 +84,11 @@ public class MatrixGraph implements Graph {
      */
     private int[] visitedArr;
 
+    /**
+     * 队列
+     */
+    private LinkedList<Integer> queue;
+
 
     /**
      * 初始化图-矩阵
@@ -96,7 +104,7 @@ public class MatrixGraph implements Graph {
         this.visitedArr = new int[n];
         this.edges = new int[n][n];
         this.numOfEdges = 0;
-
+        this.queue = new LinkedList<Integer>();
     }
 
     /**
@@ -194,17 +202,35 @@ public class MatrixGraph implements Graph {
      * @since 1.0.0
      */
     @Override
-    public void bst() {
+    public void bst(String startVertex) {
+        visitedArr = new int[vertexList.size()];
         //1)访问初始结点v并标记结点v为已访问。
+        //当前节点的坐标
+        int index = vertexList.indexOf(startVertex);
+        visitedArr[index] = 1;
         //2)结点v入队列
-        //3)当队列非空时，继续执行，否则算法结束。
-        //4)出队列，取得队头结点u。
-        //5)查找结点u的第一个邻接结点w。
-        //6)若结点u的邻接结点w不存在，则转到步骤3；否则循环执行以下三个步骤：
-        //6.1 若结点w尚未被访问，则访问结点w并标记为已访问。
-        //6.2 结点w入队列
-        //6.3 查找结点u的继w邻接结点后的下一个邻接结点w，转到步骤6。
+        queue.addLast(index);
+        System.out.print("" + startVertex + "->");
 
+        //3)当队列非空时，继续执行，否则算法结束。
+        while (!queue.isEmpty()) {
+            //4)出队列，取得队头结点u。
+            Integer u = queue.removeFirst();
+            //5)查找结点u的第一个邻接结点w。
+            int w = getFirstNeighbor(u);
+            //6)若结点u的邻接结点w不存在，则转到步骤3；否则循环执行以下三个步骤：
+            while (w != -1) {
+                //6.1 若结点w尚未被访问，则访问结点w并标记为已访问。
+                if (visitedArr[w] == 0) {
+                    visitedArr[w] = 1;
+                    //6.2 结点w入队列
+                    queue.addLast(w);
+                    System.out.print("" + vertexList.get(w) + "->");
+                }
+                //6.3 查找结点u的继w邻接结点后的下一个邻接结点w，转到步骤6。
+                w = getNextNeighbor(u, w);
+            }
+        }
     }
 
 

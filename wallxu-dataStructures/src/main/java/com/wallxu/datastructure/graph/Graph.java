@@ -56,7 +56,7 @@ public interface Graph {
      * @date: 2020/8/3 22:26
      * @since 1.0.0
      */
-     void bst();
+     void bst(String startVertex);
 
 
     /**
