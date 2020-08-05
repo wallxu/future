@@ -33,7 +33,7 @@ public class BinarySearch {
      * @param arr    待查找的数组, arr 是升序排序
      * @param target 需要查找的数
      * @return: int 返回对应下标，-1 表示没有找到
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/8/1 9:57
      * @since 1.0.0
      */

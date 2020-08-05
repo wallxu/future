@@ -40,7 +40,7 @@ public class BinarySearchTree {
      * 中序遍历
      *
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/30 19:57
      * @since 1.0.0
      */
@@ -64,7 +64,7 @@ public class BinarySearchTree {
      *
      * @param num
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/7/29 17:20
      * @since 1.0.0
      */
@@ -138,7 +138,7 @@ public class BinarySearchTree {
      *
      * @param node
      * @return: int 最小节点的值
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/8/1 10:48
      * @since 1.0.0
      */
