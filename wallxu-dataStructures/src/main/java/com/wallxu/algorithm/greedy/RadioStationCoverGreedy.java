@@ -10,8 +10,7 @@ import java.util.Map;
  * 假设存在如下表的需要付费的广播台，以及广播台信号可以覆盖的地区。
  * 如何选择最少的广播台，让所有的地区都可以接收到信号
  *
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
  * @date: 2020/8/12 11:20
  * @since 1.0.0
  */
@@ -65,7 +64,7 @@ public class RadioStationCoverGreedy {
      *
      * @param allAreas
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/8/12 15:38
      * @since 1.0.0
      */
@@ -85,7 +84,7 @@ public class RadioStationCoverGreedy {
      *
      * @param radioStationMap
      * @return: void
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/8/12 15:38
      * @since 1.0.0
      */

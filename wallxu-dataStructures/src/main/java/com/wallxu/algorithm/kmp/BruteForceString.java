@@ -3,8 +3,7 @@ package com.wallxu.algorithm.kmp;
 /**
  * 暴力破解-字符串匹配问题
  * 用暴力方法解决的话就会有大量的回溯，每次只移动一位，若是不匹配，移动到下一位接着判断，浪费了大量的时间
- * @author: xukf
- * @email: xukf1@ziroom.com
+ * @author: wallxu
  * @date: 2020/8/6 17:32
  * @since 1.0.0
  */
@@ -24,7 +23,7 @@ public class BruteForceString {
      * @param str1
      * @param str2
      * @return: int
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/8/6 17:36
      * @since 1.0.0
      */
