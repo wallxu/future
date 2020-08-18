@@ -70,8 +70,8 @@ public class PrimMst {
          * 显示图的邻接矩阵
          */
         public void showGraph(MstGraph graph) {
-            for (int[] ints : graph.weight) {
-                System.out.println(Arrays.toString(ints));
+            for (int[] intArr : graph.weight) {
+                System.out.println(Arrays.toString(intArr));
             }
         }
 
