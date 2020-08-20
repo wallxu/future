@@ -28,48 +28,39 @@ public class PrimMst {
                 {2, 3, 10000, 10000, 4, 6, 10000},};
 
         //创建MGraph 对象
-        MstGraph mstGraph = new MstGraph(verxs);
+        MstGraph mstGraph = new MstGraph(verxs, data, weight);
 
-        //创建MinTree 对象
-        MinTree minTree = new MinTree();
-        minTree.createGraph(mstGraph, verxs, data, weight);
-
-        minTree.showGraph(mstGraph);
+        mstGraph.showGraph(mstGraph);
 
         //测试普利姆算法
-        minTree.prim(mstGraph, 0);
+        mstGraph.prim(mstGraph, 0);
     }
 
 
-    /**
-     * 创建最小生成树->村庄的图
-     */
-    static class MinTree {
-        //创建图的邻接矩阵
+    static class MstGraph {
+        int verxs; //表示图的节点个数
+        char[] data;//存放结点数据
+        int[][] weight; //存放边，就是我们的邻接矩阵
 
-        /**
-         * @param graph  图对象
-         * @param verxs  图对应的顶点个数
-         * @param data   图的各个顶点的值
-         * @param weight 图的邻接矩阵
-         */
-        public void createGraph(MstGraph graph, int verxs, char[] data, int[][] weight) {
-//            graph.data = data;
-//            graph.verxs = verxs;
-//            graph.weight= weight;
+        public MstGraph(int verxs, char[] data, int[][] weight) {
+            this.verxs = verxs;
+            this.data = new char[verxs];
+            this.weight = new int[verxs][verxs];
 
             for (int i = 0; i < data.length; i++) {
-                graph.data[i] = data[i];
+                this.data[i] = data[i];
                 for (int j = 0; j < verxs; j++) {
-                    graph.weight[i][j] = weight[i][j];
+                    this.weight[i][j] = weight[i][j];
                 }
             }
         }
+
 
         /**
          * 显示图的邻接矩阵
          */
         public void showGraph(MstGraph graph) {
+            System.out.println("邻接矩阵为:");
             for (int[] intArr : graph.weight) {
                 System.out.println(Arrays.toString(intArr));
             }
@@ -118,18 +109,4 @@ public class PrimMst {
             }
         }
     }
-
-
-    static class MstGraph {
-        int verxs; //表示图的节点个数
-        char[] data;//存放结点数据
-        int[][] weight; //存放边，就是我们的邻接矩阵
-
-        public MstGraph(int verxs) {
-            this.verxs = verxs;
-            data = new char[verxs];
-            weight = new int[verxs][verxs];
-        }
-    }
-
 }

@@ -33,44 +33,47 @@ public class KruskalMst {
 
 
         //创建MGraph 对象
-        MstGraph mstGraph = new MstGraph(vertexes);
-
-        //创建MinTree 对象
-        MinTree minTree = new MinTree();
-        minTree.createGraph(mstGraph, matrix);
+        MstGraph mstGraph = new MstGraph(vertexes, matrix);
 
         //打印图中数据
-        minTree.showGraph(mstGraph);
+        mstGraph.showGraph(mstGraph);
 
-        minTree.kruskal(mstGraph);
+        mstGraph.kruskal(mstGraph);
     }
 
 
-    /**
-     * 创建最小生成树->村庄的图
-     */
-    static class MinTree {
-        //创建图的邻接矩阵
-
+    static class MstGraph {
         /**
-         * @param graph  图对象
-         * @param weight 图的邻接矩阵
+         * 边的个数
          */
-        public void createGraph(MstGraph graph, int[][] weight) {
-            int len = weight.length;
+        private int edgeNum;
+        /**
+         * 顶点数组
+         */
+        private char[] vertexes;
+        /**
+         * 邻接矩阵
+         */
+        private int[][] matrix;
+
+        public MstGraph(char[] vertexes, int[][] matrix) {
+            this.vertexes = vertexes;
+            this.matrix = new int[vertexes.length][vertexes.length];
+
+            int len = matrix.length;
             for (int i = 0; i < len; i++) {
                 for (int j = 0; j < len; j++) {
-                    graph.matrix[i][j] = weight[i][j];
+                    this.matrix[i][j] = matrix[i][j];
                 }
             }
 
             //统计边的条数
             for (int i = 0; i < len; i++) {
                 for (int j = i + 1; j < len; j++) {
-                    if (graph.matrix[i][j] > 0
-                            && graph.matrix[i][j] != INF) {
+                    if (this.matrix[i][j] > 0
+                            && this.matrix[i][j] != INF) {
                         //有效边
-                        graph.edgeNum++;
+                        this.edgeNum++;
                     }
                 }
             }
@@ -138,7 +141,6 @@ public class KruskalMst {
             for (int i = 0; i < index; i++) {
                 System.out.println(retArr[i]);
             }
-
         }
 
         /**
@@ -199,27 +201,6 @@ public class KruskalMst {
                     }
                 }
             }
-        }
-    }
-
-
-    static class MstGraph {
-        /**
-         * 边的个数
-         */
-        private int edgeNum;
-        /**
-         * 顶点数组
-         */
-        private char[] vertexes;
-        /**
-         * 邻接矩阵
-         */
-        private int[][] matrix;
-
-        public MstGraph(char[] vertexes) {
-            this.vertexes = vertexes;
-            matrix = new int[vertexes.length][vertexes.length];
         }
     }
 
