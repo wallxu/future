@@ -54,6 +54,7 @@ public class HorseChessboard {
         long end = System.currentTimeMillis();
         System.out.println("共耗时: " + (end - start) + " 毫秒");
 
+        System.out.println("finished: " + finished);
 
         //输出棋盘的最后情况
         for (int[] rows : chessboard) {
