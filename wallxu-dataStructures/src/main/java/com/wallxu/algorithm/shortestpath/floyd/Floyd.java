@@ -99,7 +99,7 @@ public class Floyd {
          * 3) 更换中间顶点，循环执行操作，直到所有顶点都作为中间顶点更新后，计算结束。
          *
          * @return: void
-         * @author: xukf
+         * @author: wallxu
          * @date: 2020/8/24 17:31
          * @since 1.0.0
          */
@@ -132,7 +132,7 @@ public class Floyd {
          * 显示pre 数组和dis 数组
          *
          * @return: void
-         * @author: xukf
+         * @author: wallxu
          * @date: 2020/8/24 17:30
          * @since 1.0.0
          */

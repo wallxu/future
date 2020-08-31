@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 字符串查找，KMP算法
  *
- * @author: xukf
+ * @author: wallxu
  * @date: 2020/8/28 14:09
  * @since 1.0.0
  */
@@ -33,14 +33,16 @@ public class Kmp {
      * @param str2    模式串
      * @param nextArr
      * @return: int
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/8/28 14:45
      * @since 1.0.0
      */
     private static int kmpSearch(String str1, String str2, int[] nextArr) {
 
         for (int i = 0, j = 0; i < str1.length(); i++) {
-            //元素不相同, 后移位置=
+            //元素不相同, 后移位置
+            //需要处理str1.charAt(i) ！= str2.charAt(j), 去调整j 的大小
+            //KMP 算法核心点, 可以验证...
             while (j > 0 && str1.charAt(i) != str2.charAt(j)) {
                 j = nextArr[j - 1];
             }
@@ -61,10 +63,10 @@ public class Kmp {
 
     /**
      * 获取模式串的next数组
-     *
+     * 获取到一个字符串(子串) 的部分匹配值表
      * @param str
      * @return: int[]
-     * @author: xukf
+     * @author: wallxu
      * @date: 2020/8/28 14:25
      * @since 1.0.0
      */
@@ -72,10 +74,15 @@ public class Kmp {
         //创建next数组
         int[] nextArr = new int[str.length()];
         //1个元素的话，返回0
+        //如果字符串是长度为1 部分匹配值就是0
         nextArr[0] = 0;
 
         for (int i = 1, j = 0; i < str.length(); i++) {
             //元素不相同
+
+            //当dest.charAt(i) != dest.charAt(j) ，我们需要从next[j-1]获取新的j
+            //直到我们发现有dest.charAt(i) == dest.charAt(j)成立才退出
+            //这时kmp 算法的核心点
             while (j > 0 && str.charAt(i) != str.charAt(j)) {
                 j = nextArr[j - 1];
             }

@@ -23,13 +23,13 @@ public class Dijkstra {
         //克鲁斯卡尔算法的邻接矩阵
         int[][] matrix = {
                 /*A*//*B*//*C*//*D*//*E*//*F*//*G*/
-                /*A*/ {INF,5,7,INF,INF,INF,2},
-                /*B*/ {5,INF,INF,9,INF,INF,3},
-                /*C*/ {7,INF,INF,INF,8,INF,INF},
-                /*D*/ {INF,9,INF,INF,INF,4,INF},
-                /*E*/ {INF,INF,8,INF,INF,5,4},
-                /*F*/ {INF,INF,INF,4,5,INF,6},
-                /*G*/ {2,3,INF,INF,4,6,INF}};
+                /*A*/ {INF, 5, 7, INF, INF, INF, 2},
+                /*B*/ {5, INF, INF, 9, INF, INF, 3},
+                /*C*/ {7, INF, INF, INF, 8, INF, INF},
+                /*D*/ {INF, 9, INF, INF, INF, 4, INF},
+                /*E*/ {INF, INF, 8, INF, INF, 5, 4},
+                /*F*/ {INF, INF, INF, 4, 5, INF, 6},
+                /*G*/ {2, 3, INF, INF, 4, 6, INF}};
 
         //创建MGraph 对象
         MstGraph mstGraph = new MstGraph(vertexes, matrix);
@@ -37,7 +37,9 @@ public class Dijkstra {
         //打印图中数据
         mstGraph.showGraph(mstGraph);
 
-//        mstGraph.kruskal(mstGraph);
+        //测试迪杰斯特拉算法, C
+        mstGraph.dsj(2);
+        mstGraph.showDijkstra();
     }
 
 
@@ -51,6 +53,11 @@ public class Dijkstra {
          */
         private int[][] matrix;
 
+        /**
+         * 已经访问的顶点的集合
+         */
+        private VisitedVertex vv;
+
         public MstGraph(char[] vertexes, int[][] weight) {
             this.vertexes = vertexes;
             this.matrix = new int[vertexes.length][vertexes.length];
@@ -63,7 +70,6 @@ public class Dijkstra {
             }
         }
 
-
         /**
          * 显示图的邻接矩阵
          */
@@ -73,8 +79,73 @@ public class Dijkstra {
                 System.out.println(Arrays.toString(intArr));
             }
         }
+
+        public void dsj(int i) {
+        }
+
+        public void showDijkstra() {
+        }
     }
 
 
+    /**
+     * 已访问顶点集合
+     */
+    static class VisitedVertex {
+        /**
+         * 记录各个顶点是否访问过1 表示访问过,0 未访问,会动态更新
+         */
+        public int[] already_arr;
 
+        /**
+         * 每个下标对应的值为前一个顶点下标, 会动态更新
+         */
+        public int[] pre_visited;
+
+        /**
+         * 记录出发顶点到其他所有顶点的距离,比如G 为出发顶点，就会记录G 到其它顶点的距离，会动态更新，
+         * 求的最短距离就会存放到dis
+         */
+        public int[] dis;
+
+        /**
+         * 显示最后的结果
+         * 即将三个数组的情况输出
+         *
+         * @return: void
+         * @author: wallxu
+         * @date: 2020/8/24 18:32
+         * @since 1.0.0
+         */
+        public void show() {
+            System.out.println("==========================");
+            //输出already_arr
+            for (int i : already_arr) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+            //输出pre_visited
+            for (int i : pre_visited) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+            //输出dis
+            for (int i : dis) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+            //为了好看最后的最短距离，我们处理
+            char[] vertex = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
+            int count = 0;
+            for (int i : dis) {
+                if (i != 65535) {
+                    System.out.print(vertex[count] + "(" + i + ") ");
+                } else {
+                    System.out.println("N ");
+                }
+                count++;
+            }
+            System.out.println();
+        }
+    }
 }
