@@ -3,7 +3,7 @@ package com.wallxu.algorithm.shortestpath.dijkstra;
 import java.util.Arrays;
 
 /**
- * TODO
+ * 迪杰斯特拉算法
  *
  * @author: wallxu
  * @date: 2020/8/19 16:45
@@ -20,7 +20,7 @@ public class Dijkstra {
         //测试看看图是否创建ok
         char[] vertexes = new char[]{'A', 'B', 'C', 'D', 'E', 'F', 'G'};
 
-        //克鲁斯卡尔算法的邻接矩阵
+        //迪杰斯特拉算法的邻接矩阵
         int[][] matrix = {
                 /*A*//*B*//*C*//*D*//*E*//*F*//*G*/
                 /*A*/ {INF, 5, 7, INF, INF, INF, 2},
@@ -37,13 +37,14 @@ public class Dijkstra {
         //打印图中数据
         mstGraph.showGraph(mstGraph);
 
-        //测试迪杰斯特拉算法, C
-        mstGraph.dsj(2);
+        //测试迪杰斯特拉算法, G
+        mstGraph.dsj(6);
         mstGraph.showDijkstra();
     }
 
 
     static class MstGraph {
+
         /**
          * 顶点数组
          */
@@ -80,10 +81,72 @@ public class Dijkstra {
             }
         }
 
-        public void dsj(int i) {
+        public void dsj(int index) {
+            vv = new VisitedVertex(vertexes.length, index);
+            //更新此节点到其他节点的距离等
+            update(index);
+
+            for (int i = 0; i < matrix.length; i++) {
+                // 选择并返回新的访问顶点
+                index = updateArr();
+                // 更新index 顶点到周围顶点的距离和前驱顶点
+                update(index);
+            }
+        }
+
+
+        /**
+         * 更新index 顶点到周围顶点的距离和前驱顶点
+         *
+         * @param index
+         * @return: void
+         * @author: xukf
+         * @date: 2020/9/1 14:46
+         * @since 1.0.0
+         */
+        public void update(int index) {
+            for (int i = 0; i < this.matrix[index].length; i++) {
+
+                // len含义是: 出发顶点到index顶点的距离 + 从index顶点到i顶点的距离的和
+                int len = vv.getDis(index) + this.matrix[index][i];
+
+                // 如果i顶点没有被访问过，并且len小于出发顶点到i顶点的距离，就需要更新
+                if (!vv.in(index) && len < vv.dis[i]) {
+                    //距离比之前的小，更新距离
+                    vv.updateDis(i, len);
+                    //距离比之前的小，更新前置元素
+                    vv.updatePre(i, index);
+                }
+            }
+
+            //当前节点设为已访问
+            vv.already_arr[index] = 1;
+        }
+
+
+        /**
+         * 选择并返回新的访问顶点
+         *
+         * @return: int
+         * @author: xukf
+         * @date: 2020/9/1 14:54
+         * @since 1.0.0
+         */
+        public int updateArr() {
+            int minDis = INF;
+            int index = 0;
+            for (int j = 0; j < matrix.length; j++) {
+                if (!vv.in(j) && vv.getDis(j) > 0 && vv.getDis(j) < minDis) {
+                    //更新最新距离
+                    minDis = vv.getDis(j);
+                    index = j;
+                }
+            }
+            return index;
         }
 
         public void showDijkstra() {
+            vv.show();
         }
     }
 
@@ -108,6 +171,24 @@ public class Dijkstra {
          */
         public int[] dis;
 
+        public VisitedVertex(int length, int index) {
+            this.already_arr = new int[length];
+            this.pre_visited = new int[length];
+            this.dis = new int[length];
+
+            //already_arr默认未访问
+            Arrays.fill(this.already_arr, 0);
+            //pre_visited默认-1，前置默认不存在
+            Arrays.fill(this.pre_visited, -1);
+            //dis默认最大
+            Arrays.fill(this.dis, INF);
+
+            //前置指向自己
+            this.pre_visited[index] = 0;
+            //到自己的距离是0
+            this.dis[index] = 0;
+        }
+
         /**
          * 显示最后的结果
          * 即将三个数组的情况输出
@@ -120,15 +201,18 @@ public class Dijkstra {
         public void show() {
             System.out.println("==========================");
             //输出already_arr
+            System.out.println("输出already_arr:");
             for (int i : already_arr) {
                 System.out.print(i + " ");
             }
             System.out.println();
+            System.out.println("输出pre_visited:");
             //输出pre_visited
             for (int i : pre_visited) {
                 System.out.print(i + " ");
             }
             System.out.println();
+            System.out.println("输出dis:");
             //输出dis
             for (int i : dis) {
                 System.out.print(i + " ");
@@ -141,11 +225,49 @@ public class Dijkstra {
                 if (i != 65535) {
                     System.out.print(vertex[count] + "(" + i + ") ");
                 } else {
-                    System.out.println("N ");
+                    System.out.print("N ");
                 }
                 count++;
             }
             System.out.println();
+            System.out.println("==========================");
+        }
+
+        /**
+         * 更新距离
+         *
+         * @param index 更新元素
+         * @param dis   距离
+         * @return: void
+         * @author: xukf
+         * @date: 2020/9/1 14:20
+         * @since 1.0.0
+         */
+        public void updateDis(int index, int dis) {
+            this.dis[index] = dis;
+        }
+
+        /**
+         * 更新前置元素
+         *
+         * @param i 更新元素
+         * @param k 目标元素
+         * @return: void
+         * @author: xukf
+         * @date: 2020/9/1 14:22
+         * @since 1.0.0
+         */
+        public void updatePre(int i, int k) {
+            this.pre_visited[i] = k;
+        }
+
+
+        public int getDis(int index) {
+            return this.dis[index];
+        }
+
+        public boolean in(int index) {
+            return this.already_arr[index] == 1;
         }
     }
 }
